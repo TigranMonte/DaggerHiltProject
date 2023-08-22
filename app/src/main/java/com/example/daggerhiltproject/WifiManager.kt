@@ -1,8 +1,9 @@
 package com.example.daggerhiltproject
 
 import android.util.Log
+import javax.inject.Inject
 
-class WifiManager(private val settings: WiFiSettings) {
+class WifiManager @Inject constructor(private val settings: WiFiSettings) {
     fun connect(){
         settings.openConnection()
     }
@@ -11,7 +12,7 @@ class WifiManager(private val settings: WiFiSettings) {
     }
 }
 
-class WiFiSettings{
+class WiFiSettings @Inject constructor() {
     fun openConnection(){
         Log.d("MyLog", "Connected")
     }
