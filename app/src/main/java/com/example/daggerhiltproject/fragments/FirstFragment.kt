@@ -1,18 +1,23 @@
 package com.example.daggerhiltproject.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.daggerhiltproject.R
+import com.example.daggerhiltproject.WifiManager
 import com.example.daggerhiltproject.databinding.FragmentFirstBinding
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
+@AndroidEntryPoint
 class FirstFragment : Fragment() {
+
+    @Inject
+    lateinit var wifiManager: WifiManager
 
     private var _binding: FragmentFirstBinding? = null
 
@@ -32,6 +37,8 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        Log.d("MyLog", "First Fragment instance id: $wifiManager")
 
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)

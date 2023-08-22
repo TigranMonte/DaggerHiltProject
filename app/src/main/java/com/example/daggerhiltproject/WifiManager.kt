@@ -2,7 +2,9 @@ package com.example.daggerhiltproject
 
 import android.util.Log
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class WifiManager @Inject constructor(private val settings: WiFiSettings) {
     fun connect(){
         settings.openConnection()

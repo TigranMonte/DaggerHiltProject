@@ -1,7 +1,10 @@
 package com.example.daggerhiltproject
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.example.daggerhiltproject.fragments.Activity2
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -13,12 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Log.d("MyLog", "MainActivity instance id: $wifiManager")
 
-//        инициализация не требуется
-//        val settings = WiFiSettings()
-//        wifiManager = WifiManager(settings)
-
-        wifiManager.connect()
-        wifiManager.sendMessage()
+        startActivity(Intent(this, Activity2::class.java))
     }
 }
