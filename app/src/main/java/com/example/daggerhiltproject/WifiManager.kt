@@ -13,7 +13,6 @@ class WifiManager @Inject constructor(private val settings: WiFiSettings) {
         settings.writeBytes()
     }
 }
-
 class WiFiSettings @Inject constructor() {
     fun openConnection(){
         Log.d("MyLog", "Connected")

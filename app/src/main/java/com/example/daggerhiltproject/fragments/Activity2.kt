@@ -29,7 +29,6 @@ class Activity2 : AppCompatActivity() {
         Log.d("MyLog", "Activity2 instance id: $wifiManager")
 
 
-
         binding = Activity2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
