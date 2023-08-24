@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.daggerhiltproject.R
-import com.example.daggerhiltproject.WifiManager
+import com.example.daggerhiltproject.WiFiManager
 import com.example.daggerhiltproject.databinding.FragmentFirstBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -17,7 +17,7 @@ import javax.inject.Inject
 class FirstFragment : Fragment() {
 
     @Inject
-    lateinit var wifiManager: WifiManager
+    lateinit var wifiManager: WiFiManager
 
     private var _binding: FragmentFirstBinding? = null
 

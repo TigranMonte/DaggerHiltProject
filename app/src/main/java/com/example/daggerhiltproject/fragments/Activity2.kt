@@ -9,7 +9,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.daggerhiltproject.R
-import com.example.daggerhiltproject.WifiManager
+import com.example.daggerhiltproject.WiFiManager
 import com.example.daggerhiltproject.databinding.Activity2Binding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -17,7 +17,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class Activity2 : AppCompatActivity() {
     @Inject
-    lateinit var wifiManager: WifiManager
+    lateinit var wifiManager: WiFiManager
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: Activity2Binding

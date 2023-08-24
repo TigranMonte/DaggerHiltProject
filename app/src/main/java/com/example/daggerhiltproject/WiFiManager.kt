@@ -1,11 +1,8 @@
 package com.example.daggerhiltproject
 
 import android.util.Log
-import javax.inject.Inject
-import javax.inject.Singleton
 
-@Singleton
-class WifiManager @Inject constructor(private val settings: WiFiSettings) {
+class WiFiManager (private val settings: WiFiSettings) {
     fun connect(){
         settings.openConnection()
     }
@@ -13,7 +10,7 @@ class WifiManager @Inject constructor(private val settings: WiFiSettings) {
         settings.writeBytes()
     }
 }
-class WiFiSettings @Inject constructor() {
+class WiFiSettings() {
     fun openConnection(){
         Log.d("MyLog", "Connected")
     }
