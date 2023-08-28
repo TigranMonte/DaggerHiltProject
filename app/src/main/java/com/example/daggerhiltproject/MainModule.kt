@@ -19,7 +19,6 @@ object MainModule {
     fun provideWiFiManager(settings: WiFiSettings): WiFiManager {
         return WiFiManager(settings)
     }
-
     @Provides
     fun provideWiFiSettings(): WiFiSettings {
         return WiFiSettings()
