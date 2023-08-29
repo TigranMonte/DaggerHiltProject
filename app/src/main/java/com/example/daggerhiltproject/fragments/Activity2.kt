@@ -41,7 +41,6 @@ class Activity2 : AppCompatActivity() {
                 .setAction("Action", null).show()
         }
     }
-
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_2)
         return navController.navigateUp(appBarConfiguration)
