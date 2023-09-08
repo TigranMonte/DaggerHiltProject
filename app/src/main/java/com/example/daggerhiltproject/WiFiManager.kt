@@ -15,7 +15,6 @@ class WiFiSettings() {
     fun openConnection(){
         Log.d("MyLog", "Connected")
     }
-
     fun writeBytes(){
         Log.d("MyLog", "Hola!")
     }
