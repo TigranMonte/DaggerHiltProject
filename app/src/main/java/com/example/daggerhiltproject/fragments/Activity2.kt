@@ -16,6 +16,7 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class Activity2 : AppCompatActivity() {
+
     @Inject
     lateinit var wifiManager: WiFiManager
 
@@ -41,7 +42,6 @@ class Activity2 : AppCompatActivity() {
                 .setAction("Action", null).show()
         }
     }
-
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_2)
         return navController.navigateUp(appBarConfiguration)
