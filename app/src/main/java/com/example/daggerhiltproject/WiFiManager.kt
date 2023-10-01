@@ -10,7 +10,6 @@ class WiFiManager (private val settings: WiFiSettings) {
         settings.writeBytes()
     }
 }
-
 class WiFiSettings() {
     fun openConnection(){
         Log.d("MyLog", "Connected")
